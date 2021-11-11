@@ -46,8 +46,6 @@ body::-webkit-scrollbar-thumb {
 figure {
     margin: 0;
 }
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif; */
 /* ----------------------------------- */
 .header__wrapper {
     padding: 2rem;
@@ -274,6 +272,9 @@ font-family: 'Poppins', sans-serif; */
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+        height: 4rem;
+        margin-top: 2rem ;
+        
     }
     .header__wrapper .logo {
         width: 10vw;
@@ -292,7 +293,6 @@ font-family: 'Poppins', sans-serif; */
     }
     .about-us__title {
         font-size: 3rem;
-        margin-top: 6rem;
     }
     .about-us__text {
         width: 50%;
