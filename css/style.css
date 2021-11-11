@@ -84,9 +84,6 @@ figure {
 }
 .about-us__text {
     font-weight: 400;
-    /* width: 90%;
-    margin-left:auto ;
-    margin-right: auto; */
     margin-bottom: 3rem;
 }
 .btn-get-start {
@@ -293,6 +290,7 @@ figure {
     }
     .about-us__title {
         font-size: 3rem;
+        margin-top: 6rem;
     }
     .about-us__text {
         width: 50%;
