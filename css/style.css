@@ -24,33 +24,14 @@ a {
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
-    /* For the scrollbar-track transparent work */
-    overflow: overlay;
     /* filter: saturate(20)  grayscale(1); */
 }
 figure {
     margin: 0;
 }
-/* scrollbar styles  */
-::-webkit-scrollbar {
-    width: 25px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    border: 2px solid white;
-    background-color: var(--Very-Dark-Cyan);
-    border-radius: 2rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--Very-Dark-Cyan-scrollbar);
-}
 
 /* ----------------------------------- */
+
 .header__wrapper {
     padding: 2rem;
     display: flex;
@@ -272,7 +253,30 @@ figure {
 .code-by p {
     margin: 0;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
+    /* scrollbar styles  */
+    html {
+        overflow-y: overlay;
+        cursor: pointer;
+    }
+    body{
+        cursor: default;
+    }
+    html::-webkit-scrollbar {
+        width: 25px;
+    }
+    html::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    html::-webkit-scrollbar-thumb {
+        border: 2px solid white;
+        background-color: var(--Very-Dark-Cyan);
+        border-radius: 2rem;
+    }
+
+    html::-webkit-scrollbar-thumb:hover {
+        background-color: var(--Very-Dark-Cyan-scrollbar);
+    }
     .header__wrapper {
         max-width: 1300px;
         width: 90%;
