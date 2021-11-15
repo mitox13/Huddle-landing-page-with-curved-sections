@@ -8,9 +8,6 @@ a {
 *::after {
     box-sizing: border-box;
 }
-html {
-    scroll-behavior: smooth;
-}
 :root {
     /* ### Primary */
 
@@ -27,25 +24,32 @@ html {
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
-    /* filter: saturate(10) grayscale(1); */
+    /* For the scrollbar-track transparent work */
+    overflow: overlay;
+    /* filter: saturate(20)  grayscale(1); */
 }
-/* scrollbar styles */
-body::-webkit-scrollbar {
-    width: 0.7rem;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: var(--Very-Dark-Cyan);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--Pink);
-    /* border-radius: .5rem; */
-}
-/* ------------------ */
 figure {
     margin: 0;
 }
+/* scrollbar styles  */
+::-webkit-scrollbar {
+    width: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid white;
+    background-color: var(--Very-Dark-Cyan);
+    border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--Very-Dark-Cyan-scrollbar);
+}
+
 /* ----------------------------------- */
 .header__wrapper {
     padding: 2rem;
@@ -258,10 +262,15 @@ figure {
 }
 
 .code-by {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
-    color: hsl(228, 45%, 44%);
-    user-select: none; 
+    color: white;
+    user-select: none;
+    padding: 1rem;
+    background-color: var(--Very-Dark-Cyan);
+}
+.code-by p {
+    margin: 0;
 }
 @media (min-width: 1000px) {
     .header__wrapper {
@@ -270,8 +279,7 @@ figure {
         margin-left: auto;
         margin-right: auto;
         height: 4rem;
-        margin-top: 2rem ;
-        
+        margin-top: 2rem;
     }
     .header__wrapper .logo {
         width: 10vw;
@@ -377,8 +385,8 @@ figure {
         margin-bottom: 3rem;
     }
 }
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
     body {
         font-size: 20px;
     }
-}
+} */
